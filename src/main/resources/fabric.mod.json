@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "steveeatstew",
+	"version": "${version}",
+	"name": "Steve Eat Stew",
+	"description": "Rebalances vanilla food items in various ways.",
+	"authors": [
+		"N1cknamed"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/steveeatstew/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.nick.steveeatstew.SteveEatStew"
+		],
+		"client": [
+			"net.nick.steveeatstew.SteveEatStewClient"
+		],
+		"fabric-datagen": [
+			"net.nick.steveeatstew.SteveEatStewDataGenerator"
+		]
+	},
+	"mixins": [
+		"steveeatstew.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.7",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
