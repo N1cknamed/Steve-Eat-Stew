@@ -16,14 +16,13 @@ import net.nick.steveeatstew.util.SteveEatStewUtils;
 public class StewItemMixin {
     @Inject(method = "finishUsing", at = @At(value = "RETURN"), cancellable = true)
     private void increaseStewMaxStack(ItemStack stack, World world, LivingEntity user, CallbackInfoReturnable<ItemStack> cir) {
-        if (user instanceof PlayerEntity player) {
-            if (stack.getCount() > 0) {
-                if (!player.isCreative()) {
-                    SteveEatStewUtils.dropStackWhenFull(player, new ItemStack(Items.BOWL)); //TODO: move last bowl to stack if available
-                }
-                cir.setReturnValue(stack);
-                cir.cancel();
-            }
+        if (!(user instanceof PlayerEntity player) || stack.getCount() <= 0) {
+            return;
         }
+        if (!player.isCreative()) {
+            SteveEatStewUtils.dropStackWhenFull(player, new ItemStack(Items.BOWL));
+        }
+        cir.setReturnValue(stack);
+        cir.cancel();
     }
 }
