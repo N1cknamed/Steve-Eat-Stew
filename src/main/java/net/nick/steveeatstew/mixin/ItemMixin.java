@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class ItemMixin {
     @Inject(method = "getMaxCount", at = @At(value = "HEAD"), cancellable = true)
     private void changeMaxStack(CallbackInfoReturnable<Integer> cir) {
-        if (!SteveEatStewUtils.INCREASE_STACK_ITEMS.contains(this.getClass())) {
+        if (!SteveEatStewUtils.INCREASE_STACK_ITEMS.contains((Item)(Object)this)) {
             return;
         }
         cir.setReturnValue(64);
