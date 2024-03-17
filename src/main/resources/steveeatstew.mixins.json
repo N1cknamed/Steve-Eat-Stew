@@ -3,7 +3,8 @@
 	"package": "net.nick.steveeatstew.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+		"ItemMixin",
+		"StewItemMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
