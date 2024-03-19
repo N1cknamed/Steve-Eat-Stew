@@ -13,7 +13,8 @@ public class SteveEatStewUtils {
             Items.MUSHROOM_STEW,
             Items.RABBIT_STEW,
             Items.BEETROOT_SOUP,
-            Items.HONEY_BOTTLE
+            Items.HONEY_BOTTLE,
+            Items.CAKE
     );
 
     public static final Map<Item, Double> SLOW_EAT_ITEMS = new HashMap<>();
