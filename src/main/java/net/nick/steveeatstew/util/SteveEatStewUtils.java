@@ -3,6 +3,8 @@ package net.nick.steveeatstew.util;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 
 public class SteveEatStewUtils {
@@ -14,9 +16,13 @@ public class SteveEatStewUtils {
             Items.HONEY_BOTTLE
     );
 
-    public static final Set<Item> SLOW_EAT_ITEMS = Set.of(
-            Items.COOKED_BEEF
-    );
+    public static final Map<Item, Double> SLOW_EAT_ITEMS = new HashMap<>();
+
+    static {
+            SLOW_EAT_ITEMS.put(Items.COOKED_BEEF, 1.5);
+            SLOW_EAT_ITEMS.put(Items.BREAD, 2.0);
+            // add more items and their multipliers as needed
+    }
 
 //TODO: add qol method to stack last container
     public static void dropStackWhenFull(PlayerEntity player, ItemStack stack) {

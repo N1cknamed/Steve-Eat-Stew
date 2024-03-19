@@ -26,8 +26,10 @@ public class ItemMixin {
             at = @At("RETURN")
     )
     private int slowEat(int original) {
-        if (SteveEatStewUtils.SLOW_EAT_ITEMS.contains((Item)(Object)this)) {
-            return (int) (original * 1.5);
+        Item item = (Item)(Object)this;
+        if (SteveEatStewUtils.SLOW_EAT_ITEMS.containsKey(item)) {
+            double multiplier = SteveEatStewUtils.SLOW_EAT_ITEMS.get(item);
+            return (int) (original * multiplier);
         }
         return original;
     }
