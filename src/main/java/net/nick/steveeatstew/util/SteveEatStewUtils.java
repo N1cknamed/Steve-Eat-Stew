@@ -14,10 +14,9 @@ public class SteveEatStewUtils {
             Items.HONEY_BOTTLE
     );
 
-//    public static final Set<Item> MAKE_EDIBLE_ITEMS = Set.of(
-//            Items.GLISTERING_MELON_SLICE,
-//            Items.SUGAR
-//    );
+    public static final Set<Item> SLOW_EAT_ITEMS = Set.of(
+            Items.COOKED_BEEF
+    );
 
 //TODO: add qol method to stack last container
     public static void dropStackWhenFull(PlayerEntity player, ItemStack stack) {
