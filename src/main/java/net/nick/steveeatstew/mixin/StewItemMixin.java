@@ -1,5 +1,6 @@
 package net.nick.steveeatstew.mixin;
 
+import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -14,15 +15,17 @@ import net.nick.steveeatstew.util.SteveEatStewUtils;
 
 @Mixin(StewItem.class)
 public class StewItemMixin {
-    @Inject(method = "finishUsing", at = @At(value = "RETURN"), cancellable = true)
-    private void increaseStewMaxStack(ItemStack stack, World world, LivingEntity user, CallbackInfoReturnable<ItemStack> cir) {
+    @ModifyReturnValue(
+            method = "finishUsing",
+            at = @At("RETURN")
+    )
+    private ItemStack increaseStewMaxStack(ItemStack original, ItemStack stack, World world, LivingEntity user) {
         if (!(user instanceof PlayerEntity player) || stack.getCount() <= 0) {
-            return;
+            return original;
         }
         if (!player.isCreative()) {
             SteveEatStewUtils.dropStackWhenFull(player, new ItemStack(Items.BOWL));
         }
-        cir.setReturnValue(stack);
-        cir.cancel();
+        return stack;
     }
 }
