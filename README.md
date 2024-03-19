@@ -1,20 +1,10 @@
 # Steve Eat Stew
-Steve Eat Stew is a WIP Fabric mod that rebalances the vanilla food options in Minecraft.
+Steve Eat Stew is a simple Fabric mod that rebalances the vanilla food options in Minecraft to give the player more varied options.
 
----
-### Stews, soups, cake and honey bottles can stack to 64
-Inventory management is awful enough without also having to manage your food supply. Rabbit stew takes its rightful place at the top of the _food chain_. Did you know cake has been stackable on Bedrock edition since forever? How's that parity update looking, Mojang?
-
-### Edible glistering melon slice and sugar
-Food is food, and these items are definitely food. Maybe now you'll remember glistering melon exists.
-
-### Varied eating durations
-Dried kelp shouldn't be the only quick snack, and Steve should take it easy on the melon pie.
-
-### Milk has nutritional value
-Especially a full bucket of the stuff.
-
----
+### Features:
+- Stews, soups, cake and honey bottles can stack to 64, making them much more viable
+- Many foods get unique eating times (similar to dried kelp) to differentiate them from each other more
+- Edible glistering melon slice and sugar add some new options to pick from
 
 ### Planned features:
 - Config options
