@@ -3,15 +3,16 @@
 	"id": "steveeatstew",
 	"version": "${version}",
 	"name": "Steve Eat Stew",
-	"description": "Rebalances vanilla food items in various ways.",
+	"description": "Rebalancing vanilla foods in various ways to give players more viable options.",
 	"authors": [
 		"N1cknamed"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://www.modrinth.com/mod/steve-eat-stew",
+		"issues": "https://github.com/N1cknamed/steve-eat-stew/issues",
+		"sources": "https://github.com/N1ckamed/steve-eat-stew"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/steveeatstew/icon.png",
 	"environment": "*",
 	"entrypoints": {
