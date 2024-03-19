@@ -25,10 +25,10 @@ public class ItemMixin {
             method = "getMaxUseTime",
             at = @At("RETURN")
     )
-    private int slowEat(int original) {
+    private int customEatingDuration(int original) {
         Item item = (Item)(Object)this;
-        if (SteveEatStewUtils.SLOW_EAT_ITEMS.containsKey(item)) {
-            double multiplier = SteveEatStewUtils.SLOW_EAT_ITEMS.get(item);
+        if (SteveEatStewUtils.USETIME_MODIFIERS.containsKey(item)) {
+            double multiplier = SteveEatStewUtils.USETIME_MODIFIERS.get(item);
             return (int) (original * multiplier);
         }
         return original;

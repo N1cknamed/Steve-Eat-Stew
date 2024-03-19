@@ -33,7 +33,7 @@ public class ItemsMixin {
                 at = @At(value = "INVOKE", target = "net/minecraft/item/Item.<init>(Lnet/minecraft/item/Item$Settings;)V", ordinal = 0)
         )
         private static Item.Settings edibleSugar(Item.Settings original) {
-            return new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1F).snack().build());
+            return new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1F).build());
         }
     }
 }
